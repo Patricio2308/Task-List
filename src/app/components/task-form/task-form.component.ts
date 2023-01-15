@@ -11,5 +11,8 @@ export class TaskFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  addTask(description:any){
+    console.log(`Dato: ` , description);
+    return false
+  }
 }
