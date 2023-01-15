@@ -31,4 +31,9 @@ export class TaskService {
    addTask(task: Task){
     this.tasks.push(task);
    }
+
+   deleteTask(task:Task){
+    let indice = this.tasks.indexOf(task);
+    this.tasks.splice(indice,1)
+   }
 }

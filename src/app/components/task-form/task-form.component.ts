@@ -20,8 +20,9 @@ export class TaskFormComponent implements OnInit {
         descripcion: description.value
       }
     )
-    console.log(this.taskServicio.getTasks())
-    
+    title.value = "";
+    description.value = "";
+    title.focus();
     return false
   }
 }

@@ -1,1 +1,17 @@
-<p>task works!</p>
+<div class="card mb-3" #taski>
+    <div class="card-header d-flex justify-content-between align-item-center">
+        {{task.title}}
+        <div>
+            <button class="btn btn-primary" (click)="showHide()">
+                <div *ngIf="!show">Mostrar</div>
+                <div *ngIf="show">Esconder</div>
+            </button>
+            <button class="btn btn-danger" (click)="delete(task)">
+                Borrar
+            </button>
+        </div>
+    </div>
+    <div class="card-body" [hidden]="" *ngIf="show">
+        {{task.descripcion}}
+    </div>
+</div>
